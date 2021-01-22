@@ -9,17 +9,13 @@ import StudentProvider from './context/StudentProvider';
 import GroupProvider from './context/GroupProvider';
 
 ReactDOM.render(
-  <React.StrictMode>
     <GroupProvider>
         <StudentProvider>
             <Router>
-                <DragDropContext>
-                    <App />
-                </DragDropContext>
+                <App />
             </Router>
         </StudentProvider>
-    </GroupProvider>
-  </React.StrictMode>,
+    </GroupProvider>,
   document.getElementById('root')
 );
 

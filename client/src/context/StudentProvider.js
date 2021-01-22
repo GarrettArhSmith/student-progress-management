@@ -5,6 +5,7 @@ export const StudentContext = React.createContext()
 
 function StudentProvider(props) {
     const [students, setStudents] = useState([])
+    const [student, setStudent] = useState(null)
 
     function getAllStudents() {
         axios.get("/student")
@@ -12,11 +13,19 @@ function StudentProvider(props) {
             .catch(err => console.log(err.response.data.errMsg))
     }
 
+    function getStudent(studentId) {
+        axios.get(`/student/${studentId}`)
+            .then(res => setStudent(res.data))
+            .catch(err => console.log(err.response.data.errMsg))
+    }
+
     return (
         <StudentContext.Provider
             value={{
                 students,
-                getAllStudents
+                getAllStudents,
+                student,
+                getStudent,
             }}
         >
             {props.children}

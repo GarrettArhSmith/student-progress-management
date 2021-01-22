@@ -31,11 +31,19 @@ function SideDrawer(props) {
     const { push } = useHistory()
     const { pathname } = useLocation()
 
-    const list1 = [
-        {text: 'Dashboard', path: "/", icon: <DashboardIcon color="secondary" />},
-        {text: 'Groups', path: "/groups", icon: <GroupIcon color="secondary" />},
-        {text: 'Progress', path: "/progress", icon: <TimelineIcon color="secondary" />}
-    ]
+    const list1 = [{
+        text: 'Dashboard', 
+        path: "/", 
+        icon: <DashboardIcon color="secondary" />
+    },{
+        text: 'Groups', 
+        path: "/students/groups", 
+        icon: <GroupIcon color="secondary" />
+    },{
+        text: 'Progress', 
+        path: "/progress", 
+        icon: <TimelineIcon color="secondary" />
+    }]
 
     return (
         <div>

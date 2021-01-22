@@ -7,7 +7,8 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: "space-between",
     },
     appBar: {
-        zIndex: theme.zIndex.drawer + 1
+        zIndex: theme.zIndex.drawer + 1,
+        top: 0
     }
 }));
 
@@ -15,8 +16,8 @@ function Topbar({ toggleTheme, theme }) {
     const classes = useStyles();
 
     return (
-        <div>
-            <AppBar position="sticky" className={classes.appBar} elevation={2}>
+        <div style={{height: 64}}>
+            <AppBar position="fixed" className={classes.appBar} elevation={2}>
                 <Toolbar className={classes.toolBar}>
                     <Typography variant="h6">
                         Student Progress Management

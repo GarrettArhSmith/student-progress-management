@@ -17,6 +17,14 @@ const studentSchema = new Schema({
         type: Schema.Types.ObjectId,
         ref: "Group",
         required: true
+    },
+    progress: {
+        type: [Number],
+        required: true
+    },
+    startDate: {
+        type: Date,
+        required: true
     }
 })
 

@@ -42,7 +42,7 @@ function App() {
                     <Route exact path="/">
                         <Dashboard />
                     </Route>
-                    <Route path="/groups">
+                    <Route path="/students/groups">
                         <Groups />
                     </Route>
                     <Route path="/students/:studentId">

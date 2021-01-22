@@ -4,7 +4,8 @@ const darkTheme = {
         background: {
             default: "#1c2025",
             paper: "#282C34",
-            subPaper: "#3f454f"
+            subPaper: "#3f454f",
+            subPaperHover: "#515863"
         },
         primary: {
             main: "#282C34"
@@ -30,14 +31,15 @@ const lightTheme = {
         background: {
             default: "#ebebeb",
             paper: "#fefefe",
-            subPaper: "#ebebeb"
+            subPaper: "#ebebeb",
+            subPaperHover: "#d9d9d9"
         },
         primary: {
             main: "#fefefe",
         },
         secondary: {
             main: "#8a85ff",
-        },
+        }
     },
 };
 

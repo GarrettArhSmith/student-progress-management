@@ -7,17 +7,20 @@ const useStyles = makeStyles((theme) => ({
         '&:hover': {
             cursor: "pointer"
         }
+    },
+    breadCrumb: {
+        padding: "0 0 15px 0"
     }
 }))
 
-function BreadcrumbNav(props) {
+function BreadcrumbNav({student}) {
     const classes = useStyles()
     const { push, location: { pathname } } = useHistory()
     const pathArr = pathname.split("/").filter(x => x)
 
     return (
         <div>
-            <Breadcrumbs aria-label="breadcrumb">
+            <Breadcrumbs aria-label="breadcrumb" className={classes.breadCrumb}>
                     {pathArr.length > 0 ? 
                         <Link 
                             color="inherit" 
@@ -40,7 +43,7 @@ function BreadcrumbNav(props) {
                                 color="textPrimary" 
                                 key={name}
                             >
-                                {upperCaseName}
+                                {student ? student : upperCaseName}
                             </Typography>
                         }
                         const routeTo = `/${pathArr.slice(0, i+1).join("/")}`

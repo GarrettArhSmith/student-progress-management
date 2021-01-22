@@ -1,3 +1,10 @@
 .App {
   text-align: center;
 }
+
+.react-daterange-picker__wrapper {
+    border: none !important;
+}
+.react-daterange-picker__inputGroup__input {
+    /* color: white !important; */
+}
